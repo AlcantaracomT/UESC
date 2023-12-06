@@ -4,7 +4,7 @@
 
 typedef struct {
     int numeroConta;
-    double saldoDevedor;
+    float saldoDevedor;
 } Conta;
 
 int main() {
@@ -17,11 +17,11 @@ int main() {
 
 
     int numeroContaEscolhida;
-    printf("Informe o número da conta (1 a %d): ", CONTAS);
+    printf("Informe o nÃºmero da conta (1 a %d): ", CONTAS);
     scanf("%d", &numeroContaEscolhida);
 
     if (numeroContaEscolhida < 1 || numeroContaEscolhida > CONTAS) {
-        printf("Número de conta inválido. Programa encerrado.\n");
+        printf("NÃºmero de conta invÃ¡lido. Programa encerrado.\n");
         return 1;
     }
 
@@ -29,28 +29,28 @@ int main() {
 
     float cobrancas, creditos, limiteCredito, novoSaldo;
 
-    printf("Informe o total de itens cobrados ao cliente no mês: ");
+    printf("Informe o total de itens cobrados ao cliente no mÃªs: ");
     scanf("%f", &cobrancas);
 
-    printf("Informe o total de créditos aplicados à conta do cliente no mês: ");
+    printf("Informe o total de crÃ©ditos aplicados Ã  conta do cliente no mÃªs: ");
     scanf("%f", &creditos);
 
-    printf("Informe o limite de crédito permitido: ");
+    printf("Informe o limite de crÃ©dito permitido: ");
     scanf("%f", &limiteCredito);
 
-    // Cálculo do novo saldo para a conta escolhida
+    // CÃ¡lculo do novo saldo para a conta escolhida
     novoSaldo = contas[indiceConta].saldoDevedor + cobrancas - creditos;
 
-    // Verificação se o novo saldo supera o limite de crédito
+    // VerificaÃ§Ã£o se o novo saldo supera o limite de crÃ©dito
     if (novoSaldo > limiteCredito) {
-        printf("\nNúmero da Conta: %d\n", contas[indiceConta].numeroConta);
-        printf("Limite de Crédito: $%.2f\n", limiteCredito);
-        printf("Mensagem: Limite de Crédito Excedido\n");
+        printf("\nNÃºmero da Conta: %d\n", contas[indiceConta].numeroConta);
+        printf("Limite de CrÃ©dito: $%.2f\n", limiteCredito);
+        printf("Mensagem: Limite de CrÃ©dito Excedido\n");
     } else {
-        printf("\nO novo saldo não excede o limite de crédito.\n");
-        printf("\nNúmero da Conta: %d\n", contas[indiceConta].numeroConta);
-        printf("Limite de Crédito: $%.2f\n", limiteCredito);
-        printf("Limite de Crédito Disponível: $%.2f\n", limiteCredito - novoSaldo);
+        printf("\nO novo saldo nÃ£o excede o limite de crÃ©dito.\n");
+        printf("\nNÃºmero da Conta: %d\n", contas[indiceConta].numeroConta);
+        printf("Limite de CrÃ©dito: $%.2f\n", limiteCredito);
+        printf("Limite de CrÃ©dito DisponÃ­vel: $%.2f\n", limiteCredito - novoSaldo);
     }
 
     return 0;
