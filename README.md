@@ -19,7 +19,7 @@ O repositório está organizado da seguinte forma:
 
 ## Como Contribuir
 
-Se você é aluno da universidade e gostaria de contribuir para este repositório, sinta-se à vontade para fazer um fork e enviar um pull request com suas contribuições. Certifique-se de seguir as diretrizes de contribuição descritas no arquivo CONTRIBUTING.md.
+Se você é aluno da universidade e gostaria de contribuir para este repositório, sinta-se à vontade. Certifique-se de seguir as diretrizes de contribuição.
 
 ## Licença
 
