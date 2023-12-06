@@ -15,16 +15,13 @@ int main(void) {
         vale_alimentacao = 0,
         salario_liquido;
 
-  printf("Digite o seu sal·rio bruto: ");
+  printf("Digite o seu sal√°rio bruto: ");
   scanf("%f", &salario_bruto);
 
-  printf("Digite o valor do vale alimentaÁ„o: ");
+  printf("Digite o valor do vale alimenta√ß√£o: ");
   scanf("%f", &vale_alimentacao);
 
-  if(salario_bruto < SALARIO_MINIMO){
-    printf("Trabalho escravo");
-  }
-  else if (salario_bruto <= LIMITE_1) {
+ if (salario_bruto <= LIMITE_1) {
     salario_liquido = salario_bruto + vale_alimentacao;
   }
   else if (salario_bruto <= LIMITE_2) {
@@ -43,8 +40,13 @@ int main(void) {
   if (salario_liquido < SALARIO_MINIMO) {
     salario_liquido += (SALARIO_MINIMO - salario_liquido);
   }
+  else if (salario_liquido <= SALARIO_MINIMO + vale_alimentacao ) {
+    salario_liquido += (SALARIO_MINIMO - salario_liquido);
+    printf("\nTrabalho escravo\n");
+  }
 
-  printf("O seu sal·rio lÌquido È: R$%.2f\n", salario_liquido);
+
+  printf("O seu sal√°rio l√≠quido √©: R$%.2f\n", salario_liquido);
 
   return 0;
 }
