@@ -4,12 +4,12 @@
 ➢ Apresente os valores.*/
 
 #include <stdio.h>
-//#define primerio 4
-//#define segunda 6
-//#define terceria 2
+#define primerio 10
+#define segunda 20
+#define terceria 5
 
 int main() {
-   int primerio,
+  /*int primerio,
   segunda,
   terceria;
 
@@ -20,7 +20,7 @@ int main() {
   scanf("%d", &segunda);
 
   printf("Digite o tamanho da terceira dimensao: ");
-  scanf("%d", &terceria);
+  scanf("%d", &terceria);*/
 
   int arr[primerio][segunda][terceria];
 
