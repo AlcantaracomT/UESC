@@ -61,6 +61,7 @@ int main(void) {
     media += Numero.number[i];
   }
 
+  media/=arr;
 
   //calcula a diferença
   for(int i = 0; i < arr; i++)
@@ -72,7 +73,7 @@ int main(void) {
   desvio = sqrt(diferenca/arr);
 
   printf("\n");
-  printf("MEDIA %.1f e o Desvio-Padrão %.1f\n", media/arr, desvio);
+  printf("MEDIA %.1f e o Desvio-Padrão %.1f\n", media, desvio);
 
   //Qual numero se repete
   for(int i = 0;i < arr - 1; i++)
